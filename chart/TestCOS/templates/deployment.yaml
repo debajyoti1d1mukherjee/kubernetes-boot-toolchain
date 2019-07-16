@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment           
+metadata:
+  name: TestCOS                          
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: TestCOS                      
+    spec:
+      containers:                       
+      - name: TestCOS                    
+        image: debajyotim/testcos            
+        ports:
+        - containerPort: 9099
